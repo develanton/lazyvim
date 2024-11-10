@@ -15,3 +15,11 @@ vim.api.nvim_set_keymap("v", "<leader>ce", ":'<,'>ChatGPTEditWithInstructions<CR
 
 -- lazygit
 vim.api.nvim_set_keymap("n", "<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true })
+
+-- Additional Neovim options for the cursor
+vim.opt.guicursor = {
+  "n-v-c:block", -- Block cursor in normal, visual, and command mode
+  "i-ci-ve:ver25", -- Vertical bar in insert and command-line insert mode
+  "r-cr:hor20", -- Horizontal bar in replace mode
+  "o:hor50", -- Horizontal bar for operator-pending mode
+}
