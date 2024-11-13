@@ -6,6 +6,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+-- Set the background to light mode globally
+vim.o.background = "light"
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -60,3 +63,6 @@ require("lazy").setup({
     },
   },
 })
+
+-- Explicitly set the colorscheme in case LazyVim overrides it
+vim.cmd([[colorscheme tokyonight]])
